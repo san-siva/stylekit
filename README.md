@@ -1,4 +1,4 @@
-# Portfolio Stylekit
+# Stylekit
 
 A comprehensive SCSS module library providing colors, typography, animations, utilities, and layout dimensions for building consistent user interfaces.
 
