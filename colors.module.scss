@@ -1,0 +1,53 @@
+// Define Colors
+$color--primary: #4242fa;
+$color--primary-light: rgba(66, 66, 250, 0.05);
+$color--primary-lighter: rgba(66, 66, 250, 0.02);
+
+$color--primary-accent: #fed600;
+$color--primary-accent-light: #fef1c4;
+$color--primary-accent-lighter: #fef8e0;
+
+// Secondary Colors
+$color--secondary: #3dad84;
+$color--secondary-light: #ecf7f3;
+$color--secondary-lighter: #f2f9f7;
+
+// Base Colors
+$color--base: #ffffff;
+$color--surface: #f6f6f6;
+$color--code: #e8f1fc;
+$color--code-numbers: #6272a4;
+$color--base-background: #ddeef8; // Container
+$color--base-background-dark: #c5eafc;
+$color--base-background-darker: #9bd3ed;
+
+// Grey Scale
+$color--grey-light: #e1e5e9;
+$color--grey-medium-light: #95a1b1;
+$color--grey-medium: #c6c6c7;
+$color--grey-medium-dark: #d9d9d9;
+$color--grey-dark: #6b7c93;
+$color--grey-darker: #4f5969;
+
+$color--pink: #e60067;
+
+// Error Colors
+$color--error: #ff4232;
+$color--error-light: #ffecea;
+
+// Link Colors
+$color--link: #0d6efd;
+
+// Dark & Black Colors
+$color--dark: #313030;
+$color--black: #000;
+
+$color--glass: rgba(255, 255, 255, 0.85);
+$color--border: #6b7c9333;
+
+.error {
+	color: $color--error;
+}
+
+$color--shadow: drop-shadow(0px 4px 4px rgba(0, 1, 1, 0.02));
+$color--shadow-dark: drop-shadow(0px 2px 2px rgba(0, 1, 1, 0.18));

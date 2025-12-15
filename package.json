@@ -1,0 +1,26 @@
+{
+  "name": "@portfolio/stylekit",
+  "version": "1.0.0",
+  "description": "Shared styles for portfolio website",
+  "main": "index.module.scss",
+  "exports": {
+    ".": "./index.module.scss",
+    "./styles": "./index.module.scss",
+    "./animations": "./animations.module.scss",
+    "./colors": "./colors.module.scss",
+    "./dimensions": "./dimensions.module.scss",
+    "./typography": "./typography.module.scss",
+    "./utils": "./utils.module.scss",
+    "./globals": "./globals.scss"
+  },
+  "files": [
+    "*.scss"
+  ],
+  "keywords": [
+    "styles",
+    "scss",
+    "css-modules"
+  ],
+  "author": "",
+  "license": "MIT"
+}

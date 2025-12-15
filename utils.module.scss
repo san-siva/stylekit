@@ -1,0 +1,67 @@
+@use 'sass:math';
+@use 'sass:map';
+
+@function getRelativeSize($px, $isRem: false) {
+	@if math.is-unitless($px) {
+		$value: math.div($px, 16);
+		@return if($isRem, $value * 1rem, $value * 1em);
+	} @else {
+		@error "Don\'t use px units in rem() function, use rem() instead of " + $px;
+	}
+}
+
+@function rem($px) {
+	@return getRelativeSize($px, true);
+}
+
+@function em($px) {
+	@return getRelativeSize($px, false);
+}
+
+$spacings: (
+	0: 4,
+	1: 8,
+	2: 16,
+	3: 24,
+	4: 32,
+	5: 40,
+	6: 48,
+	7: 56,
+	8: 64,
+	9: 96,
+);
+
+@function space($n, $useEm: false) {
+	@if $useEm {
+		@return #{em(map.get($spacings, $n))};
+	} @else {
+		@return #{rem(map.get($spacings, $n))};
+	}
+}
+
+@mixin size-utility($direction, $important: false) {
+	@each $key, $value in $spacings {
+		$calcSize: #{if($value == '', space(0), space($key))};
+
+		.margin-#{$direction}#{if($key == 0, '', '--#{$key}')} {
+			margin-#{$direction}: #{$calcSize}#{if($important, ' !important', '')};
+		}
+
+		.padding-#{$direction}#{if($key == 0, '', '--#{$key}')} {
+			padding-#{$direction}: #{$calcSize}#{if($important, ' !important', '')};
+		}
+	}
+}
+
+// Regular size classes
+@include size-utility(top);
+@include size-utility(bottom);
+@include size-utility(left);
+@include size-utility(right);
+
+// Important size classes
+@include size-utility(top, true);
+@include size-utility(bottom, true);
+@include size-utility(left, true);
+@include size-utility(right, true);
+

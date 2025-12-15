@@ -1,0 +1,177 @@
+@use 'utils.module.scss' as utils;
+@use 'typography.module.scss' as typo;
+@use 'colors.module.scss' as colors;
+
+*,
+*::before,
+*::after {
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	vertical-align: baseline;
+	border: 0 none;
+	outline: 0;
+	background-color: transparent;
+
+	font-weight: inherit;
+	font-style: inherit;
+	font-stretch: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	text-align: left;
+
+	font-family: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+
+	line-height: 1.2;
+	color: colors.$color--dark;
+}
+
+html,
+body {
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+
+	background-color: colors.$color--base;
+	font-family: typo.$font-family--secondary;
+	font-weight: typo.$font-weight--400;
+}
+
+body {
+	overflow-y: auto;
+}
+
+@mixin heading-style($fs) {
+	font-size: $fs;
+	font-weight: typo.$font-weight--500;
+	font-family: typo.$font-family--primary;
+	line-height: typo.$line-height--small;
+	color: colors.$color--dark;
+	margin-bottom: utils.space(1);
+}
+
+$headings: (
+	h1: typo.$font-size--h1,
+	h2: typo.$font-size--h2,
+	h3: typo.$font-size--h3,
+	h4: typo.$font-size--h4,
+	h5: typo.$font-size--h5,
+	h6: typo.$font-size--h6,
+	big: typo.$font-size--big,
+);
+
+@each $heading, $font-size in $headings {
+	#{$heading} {
+		@include heading-style($font-size);
+		margin-bottom: utils.space(2);
+	}
+}
+
+@mixin text-style($fs) {
+	font-size: $fs;
+	font-weight: typo.$font-weight--400;
+	font-family: inherit;
+	line-height: typo.$line-height--normal;
+	color: colors.$color--dark;
+}
+
+typo.$font-sizes: (
+	p: typo.$font-size--p,
+	a: typo.$font-size--p,
+	li: typo.$font-size--p,
+	span: typo.$font-size--p,
+	input: typo.$font-size--p,
+	textarea: typo.$font-size--p,
+	select: typo.$font-size--p,
+	div: typo.$font-size--p,
+	big: typo.$font-size--big,
+	button: typo.$font-size--button,
+	small: typo.$font-size--small,
+	cite: typo.$font-size--small,
+	code: typo.$font-size--small,
+);
+
+@each $element, $fs in typo.$font-sizes {
+	#{$element} {
+		@include text-style($fs);
+	}
+}
+
+big {
+	font-family: typo.$font-family--primary;
+}
+
+strong,
+b {
+	font-weight: typo.$font-weight--500;
+}
+
+a {
+	color: colors.$color--dark;
+	font-family: typo.$font-family--code;
+	font-weight: typo.$font-weight--400;
+	transition: all 0.2s ease-in-out;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+    color: colors.$color--primary;
+		text-decoration: underline;
+		text-decoration-color: colors.$color--primary;
+	}
+}
+
+cite {
+	color: colors.$color--grey-medium-light;
+	font-weight: typo.$font-weight--500;
+}
+
+hr {
+	width: 100%;
+	height: 1px;
+	border: none;
+	background-color: colors.$color--border;
+}
+
+mark,
+code {
+	font-family: typo.$font-family--code;
+	font-size: typo.$font-size--p-small;
+	padding: utils.rem(2) utils.rem(4);
+  background-color: colors.$color--code;
+  font-weight: typo.$font-weight--500;
+
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+mark {
+	background-color: colors.$color--primary-accent-light;
+	font-family: inherit;
+  font-size: inherit;
+  padding: unset;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding-left: utils.rem(20);
+	list-style-position: outside;
+}
+
+li {
+	margin-bottom: utils.space(0);
+}
+
+button {
+  padding: utils.space(1, true) utils.space(2, true);
+  background-color: colors.$color--primary;
+  color: colors.$color--base;
+
+  cursor: pointer;
+}

@@ -1,0 +1,109 @@
+@use 'colors.module.scss' as colors;
+@use 'utils.module.scss' as utils;
+
+$font-family--primary: 'Rubik', sans-serif;
+$font-family--secondary: 'Montserrat', sans-serif;
+$font-family--code: 'JetBrains Mono', monospace;
+$font-family: $font-family--code;
+
+$font-weight: 400;
+$font-weight--400: $font-weight;
+$font-weight--500: 500;
+$font-weight--600: 600;
+$font-weight--700: 700;
+$font-weight--800: 800;
+
+$font-size--very-big: utils.rem(64);
+$font-size--h1: utils.rem(36);
+$font-size--h2: utils.rem(32);
+$font-size--h3: utils.rem(28);
+$font-size--h4: utils.rem(24);
+$font-size--h5: utils.rem(21);
+$font-size--h6: utils.rem(18);
+$font-size--big: utils.rem(18);
+$font-size--p: utils.rem(16);
+$font-size--p-small: utils.rem(14);
+$font-size--button: utils.rem(12);
+$font-size--small: utils.rem(12);
+$font-size--very-small: utils.rem(8);
+$font-size: $font-size--p;
+
+$line-height--large: 1.9;
+$line-height--normal: 1.6;
+$line-height--small: 1.4;
+
+$font-families: (
+	primary: $font-family--primary,
+	secondary: $font-family--secondary,
+	code: $font-family--code,
+);
+
+$font-weights: (
+	400: $font-weight--400,
+	500: $font-weight--500,
+	600: $font-weight--600,
+	700: $font-weight--700,
+	800: $font-weight--800,
+);
+
+$font-sizes: (
+	h1: $font-size--h1,
+	h2: $font-size--h2,
+	h3: $font-size--h3,
+	h4: $font-size--h4,
+	h5: $font-size--h5,
+	h6: $font-size--h6,
+	big: $font-size--big,
+	button: $font-size--button,
+	p: $font-size--p,
+	small: $font-size--small,
+);
+
+$line-heights: (
+	large: $line-height--large,
+	normal: $line-height--normal,
+	small: $line-height--small,
+);
+
+@each $name, $value in $font-families {
+	.font--#{$name} {
+		font-family: #{$value};
+	}
+}
+
+@each $weight, $value in $font-weights {
+	.font-weight--#{$weight} {
+		font-weight: #{$value};
+	}
+}
+
+@each $size, $value in $font-sizes {
+	.font-size--#{$size} {
+		font-size: #{$value};
+	}
+}
+
+@each $height, $value in $line-heights {
+	.line-height--#{$height} {
+		line-height: #{$value};
+	}
+}
+
+.text-align--center {
+	text-align: center;
+}
+
+.category__header {
+	color: colors.$color--pink;
+	font-size: $font-size--p;
+	font-weight: $font-weight--600;
+	text-transform: uppercase;
+	letter-spacing: 0.1ch;
+}
+
+.a--highlighted {
+	font-family: $font-family--secondary;
+	text-decoration: underline;
+	text-decoration-color: colors.$color--primary;
+	font-weight: $font-weight--500;
+}

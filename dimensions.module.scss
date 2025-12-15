@@ -1,0 +1,121 @@
+@use 'colors.module.scss' as colors;
+@use 'utils.module.scss' as utils;
+
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	overflow: hidden;
+	overflow-y: auto;
+
+	padding: utils.rem(18);
+	min-height: calc(100% - #{utils.rem(36)});
+  width: calc(100% - #{utils.rem(36)});
+	height: auto;
+
+	&--contents-centered {
+		justify-content: center;
+		align-items: center;
+	}
+
+  &--no-padding {
+    padding: 0;
+  }
+}
+
+$max-width--page-contents: utils.rem(780);
+
+.page {
+	--topbar-height: #{utils.rem(80)};
+	display: block;
+
+	height: auto;
+	min-height: calc(
+		100% - var(--topbar-height) - #{utils.rem(48)} - #{utils.rem(48)} -
+			#{utils.rem(160)} - #{utils.rem(489)}
+	);
+	max-width: utils.rem(1216);
+	margin: 0 auto;
+
+	--width-sections: calc(
+		100% - #{utils.rem(240)}
+	); // width should be 120px + remaining width + 120px
+	width: var(--width-sections);
+	--padding-sections-left: calc(
+		(100% - var(--width-sections)) / 2
+	); // (100% - width) / 2
+	padding: utils.rem(48) var(--padding-sections-left);
+	--topbar-buffer: #{utils.rem(28)};
+	padding-top: utils.rem(80);
+
+	&--contents-max-width {
+		> * {
+			max-width: $max-width--page-contents;
+		}
+	}
+
+  &--no-extra-padding {
+    --width-sections: calc(100% - #{utils.rem(16)} - #{utils.rem(16)}) !important;
+    --padding-sections-left: #{utils.rem(32)} !important;
+    padding: utils.rem(16) var(--padding-sections-left);
+  }
+
+  &--no-max-width {
+    max-width: unset;
+  }
+}
+
+$border-radius: utils.rem(4);
+$border-radius--1: utils.rem(8);
+$border-radius--1-5: utils.rem(12);
+$border-radius--2: utils.rem(16);
+$border-radius--3: utils.rem(24);
+$border-radius--4: utils.rem(32);
+
+$mobile_starting_width: utils.rem(568);
+$ipad_starting_width: utils.rem(834);
+
+$breakpoints: (
+	// ipad
+	#{$ipad_starting_width}: utils.rem(16),
+	// mobile landscape
+	#{utils.rem(812)}: utils.rem(16),
+	// ipad s
+	#{utils.rem(768)}: utils.rem(16),
+	// mobile s landscape
+	#{$mobile_starting_width}: utils.rem(16),
+	// mobile
+	#{utils.rem(375)}: utils.rem(16),
+	// mobile s
+	#{utils.rem(320)}: utils.rem(16)
+);
+
+@each $width, $margin in $breakpoints {
+	@media screen and (max-width: $width) {
+		.page {
+			--width-sections: calc(100% - #{$margin} - #{$margin});
+			--padding-sections-left: #{$margin};
+		}
+	}
+}
+
+.hr {
+	width: 100%;
+	height: 1px;
+	border: none;
+	background-color: colors.$color--border;
+}
+
+.li--disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.block {
+	display: block;
+}
