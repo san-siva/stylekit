@@ -1,17 +1,24 @@
 {
   "name": "@san-siva/stylekit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modular SCSS design system with utilities, colors, typography, and animations",
   "main": "index.module.scss",
   "exports": {
     ".": "./index.module.scss",
+    "./index.module.scss": "./index.module.scss",
     "./styles": "./index.module.scss",
     "./animations": "./animations.module.scss",
+    "./animations.module.scss": "./animations.module.scss",
     "./colors": "./colors.module.scss",
+    "./colors.module.scss": "./colors.module.scss",
     "./dimensions": "./dimensions.module.scss",
+    "./dimensions.module.scss": "./dimensions.module.scss",
     "./typography": "./typography.module.scss",
+    "./typography.module.scss": "./typography.module.scss",
     "./utils": "./utils.module.scss",
-    "./globals": "./globals.scss"
+    "./utils.module.scss": "./utils.module.scss",
+    "./globals": "./globals.scss",
+    "./globals.scss": "./globals.scss"
   },
   "files": [
     "*.scss"
