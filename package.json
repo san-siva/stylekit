@@ -1,7 +1,7 @@
 {
-  "name": "@portfolio/stylekit",
+  "name": "@san-siva/stylekit",
   "version": "1.0.0",
-  "description": "Shared styles for portfolio website",
+  "description": "A modular SCSS design system with utilities, colors, typography, and animations",
   "main": "index.module.scss",
   "exports": {
     ".": "./index.module.scss",
@@ -21,6 +21,6 @@
     "scss",
     "css-modules"
   ],
-  "author": "",
+  "author": "Santhosh Siva",
   "license": "MIT"
 }
