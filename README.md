@@ -5,7 +5,11 @@ A comprehensive SCSS module library providing colors, typography, animations, ut
 ## Installation
 
 ```bash
-npm install @portfolio/stylekit
+npm install @san-siva/stylekit
+# or
+yarn add @san-siva/stylekit
+# or
+pnpm add @san-siva/stylekit
 ```
 
 ## Usage
@@ -13,7 +17,7 @@ npm install @portfolio/stylekit
 ### Import All Styles
 
 ```scss
-@use '@portfolio/stylekit' as styles;
+@use '@san-siva/stylekit' as styles;
 
 .my-element {
   color: styles.$color--primary;
@@ -24,9 +28,9 @@ npm install @portfolio/stylekit
 ### Import Individual Modules
 
 ```scss
-@use '@portfolio/stylekit/colors' as colors;
-@use '@portfolio/stylekit/typography' as typography;
-@use '@portfolio/stylekit/utils' as utils;
+@use '@san-siva/stylekit/colors' as colors;
+@use '@san-siva/stylekit/typography' as typography;
+@use '@san-siva/stylekit/utils' as utils;
 
 .my-element {
   color: colors.$color--primary;
@@ -116,7 +120,7 @@ Helper functions and spacing utilities.
 
 Example:
 ```scss
-@use '@portfolio/stylekit/utils' as utils;
+@use '@san-siva/stylekit/utils' as utils;
 
 .element {
   padding: utils.space(3); // 24px = 1.5rem
@@ -164,7 +168,7 @@ Keyframe animations for common UI patterns.
 
 Example:
 ```scss
-@use '@portfolio/stylekit/animations';
+@use '@san-siva/stylekit/animations';
 
 .my-element {
   animation: fadeInDown 0.3s ease-out;
@@ -176,21 +180,29 @@ Example:
 Global styles and resets to be imported once in your application.
 
 ```scss
-@use '@portfolio/stylekit/globals';
+@use '@san-siva/stylekit/globals';
 ```
 
 ## Package Exports
 
 The package provides the following export paths:
 
-- `@portfolio/stylekit` - All styles (index)
-- `@portfolio/stylekit/colors` - Colors only
-- `@portfolio/stylekit/typography` - Typography only
-- `@portfolio/stylekit/utils` - Utilities only
-- `@portfolio/stylekit/dimensions` - Dimensions only
-- `@portfolio/stylekit/animations` - Animations only
-- `@portfolio/stylekit/globals` - Global styles
+- `@san-siva/stylekit` - All styles (index)
+- `@san-siva/stylekit/colors` - Colors only
+- `@san-siva/stylekit/typography` - Typography only
+- `@san-siva/stylekit/utils` - Utilities only
+- `@san-siva/stylekit/dimensions` - Dimensions only
+- `@san-siva/stylekit/animations` - Animations only
+- `@san-siva/stylekit/globals` - Global styles
+
+## Works Great With
+
+Stylekit works seamlessly with [@san-siva/blogkit](https://www.npmjs.com/package/@san-siva/blogkit) for building beautiful blog interfaces!
+
+## Contributing
+
+Contributions are welcome! Open an issue or submit a pull request on [GitHub](https://github.com/san-siva/stylekit).
 
 ## License
 
-MIT
+MIT © [Santhosh Siva](https://santhoshsiva.dev)
