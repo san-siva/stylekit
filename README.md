@@ -1,6 +1,25 @@
-# Stylekit
+# StyleKit
 
-A comprehensive SCSS module library providing colors, typography, animations, utilities, and layout dimensions for building consistent user interfaces.
+A comprehensive, modular SCSS design system providing colors, typography, animations, utilities, and layout dimensions for building consistent, beautiful user interfaces. Built with CSS Modules support and designed for modern web applications.
+
+**[View Full Documentation](https://stylekit-68309.web.app/)**
+
+## Overview
+
+StyleKit is a production-ready SCSS design system that provides a complete set of design tokens, utility functions, and pre-built styles for rapid UI development. It ensures style consistency across your application while maintaining flexibility for customization. Built with modern SCSS features, it works seamlessly with any framework or build tool that supports SCSS and CSS Modules.
+
+## Features
+
+- **Comprehensive Color System**: Primary, secondary, accent, semantic, and grayscale colors with variants
+- **Typography Scale**: Font families, sizes, weights, line heights, and utility classes
+- **Spacing System**: 0-9 scale with utility functions and classes for margins and padding
+- **Layout System**: Responsive containers, page layouts, and dimension utilities
+- **Animation Library**: Pre-built keyframe animations for common UI patterns
+- **Utility Functions**: rem/em converters, spacing functions, and helper utilities
+- **CSS Modules Ready**: Full support for scoped styling with CSS Modules
+- **Framework Agnostic**: Works with React, Vue, Angular, Next.js, and more
+- **TypeScript Friendly**: Designed for modern tooling and development workflows
+- **Responsive Design**: Built-in breakpoints and responsive utilities
 
 ## Installation
 
@@ -12,197 +31,217 @@ yarn add @san-siva/stylekit
 pnpm add @san-siva/stylekit
 ```
 
-## Usage
+### Requirements
 
-### Import All Styles
+- Sass >= 1.50.0
+- CSS Modules support in your build tool
+- Any modern framework (React, Vue, Angular, etc.) or vanilla JavaScript
+
+## Quick Start
+
+### 1. Import Global Styles (Optional)
+
+Import the global stylesheet in your application entry point for base styles and resets:
+
+```tsx
+// app/layout.tsx or _app.tsx
+import '@san-siva/stylekit/styles/globals.scss';
+```
+
+### 2. Import SCSS Modules
+
+Import StyleKit modules in your component styles:
 
 ```scss
-@use '@san-siva/stylekit' as styles;
+// components/Button.module.scss
+@use '@san-siva/stylekit/styles/colors.module.scss' as colors;
+@use '@san-siva/stylekit/styles/utils.module.scss' as utils;
 
-.my-element {
-  color: styles.$color--primary;
-  font-size: styles.$font-size--h1;
+.button {
+  background-color: colors.$color--primary;
+  padding: utils.space(2);
+  border-radius: utils.rem(8);
+
+  &:hover {
+    background-color: colors.$color--primary-light;
+  }
 }
 ```
 
-### Import Individual Modules
+### 3. Use Utility Classes
 
-```scss
-@use '@san-siva/stylekit/colors' as colors;
-@use '@san-siva/stylekit/typography' as typography;
-@use '@san-siva/stylekit/utils' as utils;
+Import utility classes in your components:
 
-.my-element {
-  color: colors.$color--primary;
-  font-size: typography.$font-size--h1;
-  padding: utils.space(3);
+```tsx
+import styles from '@san-siva/stylekit/styles/index.module.scss';
+
+export function MyComponent() {
+  return (
+    <div className={styles['margin-bottom--3']}>
+      <h1 className={styles['font-size--h1']}>Welcome</h1>
+      <p className={styles['margin-top--2']}>Get started with StyleKit!</p>
+    </div>
+  );
 }
 ```
 
-## Modules
+## Documentation
 
-### Colors
+Comprehensive documentation is available at [https://stylekit-68309.web.app/](https://stylekit-68309.web.app/)
 
-Comprehensive color palette including primary, secondary, accent, error, and greyscale colors.
+The documentation includes:
 
-**Primary Colors:**
-- `$color--primary`: #4242fa
-- `$color--primary-light`: rgba(66, 66, 250, 0.05)
-- `$color--primary-accent`: #fed600
+- Complete module reference with all variables and utilities
+- Visual examples and color swatches
+- Code examples for every feature
+- Best practices and usage patterns
+- Framework integration guides (React, Vue, Angular)
+- Customization and theming guide
+- Performance optimization tips
 
-**Secondary Colors:**
-- `$color--secondary`: #3dad84
-- `$color--secondary-light`: #ecf7f3
+## Module Overview
 
-**Base Colors:**
-- `$color--base`: #ffffff
-- `$color--surface`: #f6f6f6
-- `$color--dark`: #313030
-- `$color--black`: #000
+### Colors Module
 
-**Greyscale:**
-- `$color--grey-light` through `$color--grey-darker`
+Comprehensive color palette with semantic naming:
+- **Primary Colors**: Main brand colors with light variants
+- **Accent Colors**: Highlight and emphasis colors
+- **Secondary Colors**: Supporting brand colors
+- **Semantic Colors**: Error, success, warning states
+- **Greyscale**: Light through dark grey tones
+- **Base Colors**: Background and surface colors
 
-**Utility Colors:**
-- `$color--error`: #ff4232
-- `$color--link`: #0d6efd
-- `$color--pink`: #e60067
-- `$color--glass`: rgba(255, 255, 255, 0.85)
-
-### Typography
-
-Font families, sizes, weights, and line heights with utility classes.
-
-**Font Families:**
-- `$font-family--primary`: 'Rubik', sans-serif
-- `$font-family--secondary`: 'Montserrat', sans-serif
-- `$font-family--code`: 'JetBrains Mono', monospace
-
-**Font Sizes:**
-- `$font-size--h1` through `$font-size--h6`
-- `$font-size--big`, `$font-size--p`, `$font-size--small`
-- `$font-size--button`, `$font-size--very-small`
-
-**Font Weights:**
-- `$font-weight--400` through `$font-weight--800`
-
-**Line Heights:**
-- `$line-height--large`: 1.9
-- `$line-height--normal`: 1.6
-- `$line-height--small`: 1.4
-
-**Utility Classes:**
-- `.font--primary`, `.font--secondary`, `.font--code`
-- `.font-weight--400` through `.font-weight--800`
-- `.font-size--h1` through `.font-size--small`
-- `.line-height--large`, `.line-height--normal`, `.line-height--small`
-- `.category__header` - Pink uppercase header style
-- `.a--highlighted` - Underlined link style
-
-### Utils
-
-Helper functions and spacing utilities.
-
-**Functions:**
-- `rem($px)` - Convert pixels to rem units
-- `em($px)` - Convert pixels to em units
-- `space($n, $useEm)` - Get spacing value from scale (0-9)
-
-**Spacing Scale:**
-- 0: 4px, 1: 8px, 2: 16px, 3: 24px, 4: 32px
-- 5: 40px, 6: 48px, 7: 56px, 8: 64px, 9: 96px
-
-**Utility Classes:**
-- `.margin-{direction}--{0-9}` - Margin utilities
-- `.padding-{direction}--{0-9}` - Padding utilities
-- Directions: top, bottom, left, right
-- Both regular and `!important` variants available
-
-Example:
 ```scss
-@use '@san-siva/stylekit/utils' as utils;
+@use '@san-siva/stylekit/styles/colors.module.scss' as colors;
 
-.element {
-  padding: utils.space(3); // 24px = 1.5rem
-  margin-top: utils.rem(16);
+.alert {
+  background: colors.$color--error-light;
+  border-left: 3px solid colors.$color--error;
 }
 ```
 
-### Dimensions
+### Typography Module
 
-Layout dimensions, containers, pages, border radius, and responsive breakpoints.
+Complete typographic system with:
+- **Font Families**: Rubik, Montserrat, JetBrains Mono
+- **Font Sizes**: h1-h6, paragraph, small (with utility classes)
+- **Font Weights**: 400-800 (with utility classes)
+- **Line Heights**: Large, normal, small
 
-**Containers:**
-- `.container` - Flexible container with padding
-- `.container--contents-centered` - Centered content
-- `.container--no-padding` - Remove padding
+```scss
+@use '@san-siva/stylekit/styles/typography.module.scss' as type;
 
-**Page Layout:**
-- `.page` - Main page container with max-width 1216px
-- `.page--contents-max-width` - Limit content width to 780px
-- `.page--no-extra-padding` - Reduced padding
-- `.page--no-max-width` - Full width
+.heading {
+  font-family: type.$font-family--secondary;
+  font-size: type.$font-size--h2;
+  font-weight: type.$font-weight--700;
+}
+```
 
-**Border Radius:**
-- `$border-radius`: 4px through `$border-radius--4`: 32px
+### Utils Module
 
-**Breakpoints:**
-- Mobile: 320px, 375px, 568px
-- Tablet: 768px, 812px, 834px
-- Automatically adjusts page padding
+Utility functions and spacing system:
+- **Functions**: `rem()`, `em()`, `space()` converters
+- **Spacing Scale**: 0-9 (4px to 96px)
+- **Margin/Padding Classes**: All directions with scale support
 
-**Utility Classes:**
-- `.hr` - Horizontal rule
-- `.li--disabled` - Disabled list item
-- `.block` - Display block
+```scss
+@use '@san-siva/stylekit/styles/utils.module.scss' as utils;
 
-### Animations
+.card {
+  padding: utils.space(3);      // 24px
+  margin-bottom: utils.space(4); // 32px
+  border-radius: utils.rem(8);   // 0.5rem
+}
+```
 
-Keyframe animations for common UI patterns.
+### Dimensions Module
 
-**Available Animations:**
+Layout and responsive utilities:
+- **Containers**: Flexible container classes
+- **Page Layout**: Max-width page containers
+- **Border Radius**: Scale from 4px to 32px
+- **Breakpoints**: Mobile, tablet, and desktop
+
+```scss
+@use '@san-siva/stylekit/styles/dimensions.module.scss' as dims;
+
+.card {
+  border-radius: dims.$border-radius--2;
+}
+```
+
+### Animations Module
+
+Pre-built keyframe animations:
 - `loading_animation` - Background position animation
 - `MoveInTop` - Slide in from bottom
 - `fadeInDown` - Fade in from top
-- `fadeUp` - Fade up and left
+- `fadeUp` - Fade up with offset
 
-Example:
 ```scss
-@use '@san-siva/stylekit/animations';
+@use '@san-siva/stylekit/styles/animations.module.scss';
 
-.my-element {
-  animation: fadeInDown 0.3s ease-out;
+.modal {
+  animation: MoveInTop 0.3s ease-out;
 }
-```
-
-### Globals
-
-Global styles and resets to be imported once in your application.
-
-```scss
-@use '@san-siva/stylekit/globals';
 ```
 
 ## Package Exports
 
-The package provides the following export paths:
+The package provides multiple entry points for flexible imports:
 
-- `@san-siva/stylekit` - All styles (index)
-- `@san-siva/stylekit/colors` - Colors only
-- `@san-siva/stylekit/typography` - Typography only
-- `@san-siva/stylekit/utils` - Utilities only
-- `@san-siva/stylekit/dimensions` - Dimensions only
-- `@san-siva/stylekit/animations` - Animations only
-- `@san-siva/stylekit/globals` - Global styles
+```
+@san-siva/stylekit/styles/index.module.scss     - All modules
+@san-siva/stylekit/styles/colors.module.scss    - Colors only
+@san-siva/stylekit/styles/typography.module.scss - Typography only
+@san-siva/stylekit/styles/utils.module.scss     - Utils only
+@san-siva/stylekit/styles/dimensions.module.scss - Dimensions only
+@san-siva/stylekit/styles/animations.module.scss - Animations only
+@san-siva/stylekit/styles/globals.scss          - Global styles
+```
+
+## Examples
+
+StyleKit is used in production on these sites:
+
+- **[StyleKit Documentation](https://stylekit-68309.web.app/)** - Interactive documentation site
+- **[Blogkit Documentation](https://blogkit-c367c.web.app/)** - Component library docs
+- **[Gitsy](https://gitsy-56895.web.app/)** - Blog application
+- **[Personal Portfolio](https://santhoshsiva.dev)** - Developer portfolio
 
 ## Works Great With
 
-Stylekit works seamlessly with [@san-siva/blogkit](https://www.npmjs.com/package/@san-siva/blogkit) for building beautiful blog interfaces!
+StyleKit is designed to work seamlessly with [@san-siva/blogkit](https://www.npmjs.com/package/@san-siva/blogkit) for building beautiful blog interfaces with consistent styling.
+
+## Browser Support
+
+StyleKit supports all modern browsers:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
 ## Contributing
 
-Contributions are welcome! Open an issue or submit a pull request on [GitHub](https://github.com/san-siva/stylekit).
+Contributions are welcome and appreciated. To contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+Please ensure your code follows the existing style conventions.
+
+For bug reports and feature requests, please [open an issue](https://github.com/san-siva/stylekit/issues) on GitHub.
 
 ## License
 
 MIT © [Santhosh Siva](https://santhoshsiva.dev)
+
+## Author
+
+**Santhosh Siva**
+- Website: [https://santhoshsiva.dev](https://santhoshsiva.dev)
+- GitHub: [@san-siva](https://github.com/san-siva)

@@ -33,9 +33,9 @@ export default function StyleKitDocumentation() {
 					<mark>
 						<strong>StyleKit</strong> focuses on developer-centric architecture
 						rather than being a rigid framework or library.
-					</mark>
-					I would encourage you to use StyleKit as a starting point for your
-					own design system, and then customize it to fit your needs.
+					</mark>{' '}
+					I would encourage you to use StyleKit as a starting point for your own
+					design system, and then customize it to fit your needs.
 				</p>
 			</BlogSection>
 
