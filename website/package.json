@@ -1,0 +1,27 @@
+{
+	"name": "stylekit-website",
+	"version": "1.0.0",
+	"private": false,
+	"scripts": {
+		"dev": "TURBOPACK=0 next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "eslint"
+	},
+	"dependencies": {
+		"@san-siva/blogkit": "^1.1.6",
+		"@san-siva/stylekit": "^1.0.2",
+		"next": "^16.0.10",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"sass": "^1.95.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"eslint": "^9",
+		"eslint-config-next": "16.0.8",
+		"typescript": "^5"
+	}
+}

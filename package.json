@@ -5,13 +5,6 @@
   "main": "styles/index.module.scss",
   "exports": {
     ".": "./styles/index.module.scss",
-    "./index.module.scss": "./styles/index.module.scss",
-    "./animations.module.scss": "./styles/animations.module.scss",
-    "./colors.module.scss": "./styles/colors.module.scss",
-    "./dimensions.module.scss": "./styles/dimensions.module.scss",
-    "./typography.module.scss": "./styles/typography.module.scss",
-    "./utils.module.scss": "./styles/utils.module.scss",
-    "./globals.scss": "./styles/globals.scss",
     "./styles/*.scss": "./styles/*.scss",
     "./styles/index.module.scss": "./styles/index.module.scss",
     "./styles/animations.module.scss": "./styles/animations.module.scss",
