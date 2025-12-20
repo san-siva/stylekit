@@ -2,19 +2,27 @@
   "name": "@san-siva/stylekit",
   "version": "1.0.1",
   "description": "A modular SCSS design system with utilities, colors, typography, and animations",
-  "main": "index.module.scss",
+  "main": "styles/index.module.scss",
   "exports": {
-    ".": "./index.module.scss",
-    "./index.module.scss": "./index.module.scss",
-    "./animations.module.scss": "./animations.module.scss",
-    "./colors.module.scss": "./colors.module.scss",
-    "./dimensions.module.scss": "./dimensions.module.scss",
-    "./typography.module.scss": "./typography.module.scss",
-    "./utils.module.scss": "./utils.module.scss",
-    "./globals.scss": "./globals.scss"
+    ".": "./styles/index.module.scss",
+    "./index.module.scss": "./styles/index.module.scss",
+    "./animations.module.scss": "./styles/animations.module.scss",
+    "./colors.module.scss": "./styles/colors.module.scss",
+    "./dimensions.module.scss": "./styles/dimensions.module.scss",
+    "./typography.module.scss": "./styles/typography.module.scss",
+    "./utils.module.scss": "./styles/utils.module.scss",
+    "./globals.scss": "./styles/globals.scss",
+    "./styles/*.scss": "./styles/*.scss",
+    "./styles/index.module.scss": "./styles/index.module.scss",
+    "./styles/animations.module.scss": "./styles/animations.module.scss",
+    "./styles/colors.module.scss": "./styles/colors.module.scss",
+    "./styles/dimensions.module.scss": "./styles/dimensions.module.scss",
+    "./styles/typography.module.scss": "./styles/typography.module.scss",
+    "./styles/utils.module.scss": "./styles/utils.module.scss",
+    "./styles/globals.scss": "./styles/globals.scss"
   },
   "files": [
-    "*.scss"
+    "styles/**/*.scss"
   ],
   "keywords": [
     "styles",
