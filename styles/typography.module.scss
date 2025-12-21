@@ -64,6 +64,7 @@ $line-heights: (
 	large: $line-height--large,
 	normal: $line-height--normal,
 	small: $line-height--small,
+  very-small: $line-height--very-small,
 );
 
 @each $name, $value in $font-families {

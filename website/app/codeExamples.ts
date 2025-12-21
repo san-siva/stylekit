@@ -4,7 +4,7 @@ export const INSTALL_NPM = `npm install @san-siva/stylekit`;
 
 export const INSTALL_YARN = `yarn add @san-siva/stylekit`;
 
-export const IMPORT_ALL_MODULES = `@use '@san-siva/stylekit/index.module.scss' as stylekit;
+export const IMPORT_ALL_MODULES = `@use '@san-siva/stylekit/styles/index.module.scss' as stylekit;
 
 .my-component {
   color: stylekit.$color--primary;
@@ -12,8 +12,8 @@ export const IMPORT_ALL_MODULES = `@use '@san-siva/stylekit/index.module.scss' a
   font-size: stylekit.$font-size--h3;
 }`;
 
-export const IMPORT_SPECIFIC_MODULES = `@use '@san-siva/stylekit/colors.module.scss' as colors;
-@use '@san-siva/stylekit/utils.module.scss' as utils;
+export const IMPORT_SPECIFIC_MODULES = `@use '@san-siva/stylekit/styles/colors.module.scss' as colors;
+@use '@san-siva/stylekit/styles/utils.module.scss' as utils;
 
 .card {
   background-color: colors.$color--base;
@@ -22,7 +22,7 @@ export const IMPORT_SPECIFIC_MODULES = `@use '@san-siva/stylekit/colors.module.s
   border-radius: utils.rem(8);
 }`;
 
-export const USE_UTILITY_CLASSES = `import styles from '@san-siva/stylekit/index.module.scss';
+export const USE_UTILITY_CLASSES = `import styles from '@san-siva/stylekit/styles/index.module.scss';
 
 export function MyComponent() {
   return (
@@ -33,7 +33,7 @@ export function MyComponent() {
   );
 }`;
 
-export const COLORS_EXAMPLE_USAGE = `@use '@san-siva/stylekit/colors.module.scss' as colors;
+export const COLORS_EXAMPLE_USAGE = `@use '@san-siva/stylekit/styles/colors.module.scss' as colors;
 
 .button--primary {
   background-color: colors.$color--primary;
@@ -50,7 +50,7 @@ export const COLORS_EXAMPLE_USAGE = `@use '@san-siva/stylekit/colors.module.scss
   color: colors.$color--dark;
 }`;
 
-export const TYPOGRAPHY_EXAMPLE_USAGE = `@use '@san-siva/stylekit/typography.module.scss' as type;
+export const TYPOGRAPHY_EXAMPLE_USAGE = `@use '@san-siva/stylekit/styles/typography.module.scss' as type;
 
 .heading {
   font-family: type.$font-family--secondary;
@@ -65,7 +65,7 @@ export const TYPOGRAPHY_EXAMPLE_USAGE = `@use '@san-siva/stylekit/typography.mod
   line-height: type.$line-height--normal;
 }`;
 
-export const TYPOGRAPHY_UTILITY_CLASSES = `import styles from '@san-siva/stylekit/typography.module.scss';
+export const TYPOGRAPHY_UTILITY_CLASSES = `import styles from '@san-siva/stylekit/styles/typography.module.scss';
 
 <h1 className={\`\${styles['font-size--h1']} \${styles['font-weight--700']}\`}>
   Welcome
@@ -81,7 +81,7 @@ export const SPACING_UTILITIES_LIST = `.margin-top--0 through .margin-top--9
 .padding-left--0 through .padding-left--9
 .padding-right--0 through .padding-right--9`;
 
-export const UTILS_EXAMPLE_USAGE_WITH_FUNCTIONS = `@use '@san-siva/stylekit/utils.module.scss' as utils;
+export const UTILS_EXAMPLE_USAGE_WITH_FUNCTIONS = `@use '@san-siva/stylekit/styles/utils.module.scss' as utils;
 
 .card {
   padding: utils.space(3);        // 24px (1.5rem)
@@ -94,14 +94,14 @@ export const UTILS_EXAMPLE_USAGE_WITH_FUNCTIONS = `@use '@san-siva/stylekit/util
   }
 }`;
 
-export const UTILS_EXAMPLE_USAGE_WITH_CLASSES = `import styles from '@san-siva/stylekit/utils.module.scss';
+export const UTILS_EXAMPLE_USAGE_WITH_CLASSES = `import styles from '@san-siva/stylekit/styles/utils.module.scss';
 
 <div className={styles['padding-top--4']}>
   <h2 className={styles['margin-bottom--2']}>Section Title</h2>
   <p className={styles['margin-bottom--3']}>Content here</p>
 </div>`;
 
-export const ANIMATIONS_EXAMPLE_USAGE = `@use '@san-siva/stylekit/animations.module.scss';
+export const ANIMATIONS_EXAMPLE_USAGE = `@use '@san-siva/stylekit/styles/animations.module.scss';
 
 .modal-enter {
   animation: MoveInTop 0.3s ease-out;
@@ -156,7 +156,7 @@ export const PAGE_LAYOUT = `.page {
   --padding-sections-left: 32px;
 }`;
 
-export const DIMENSIONS_EXAMPLE_USAGE = `@use '@san-siva/stylekit/dimensions.module.scss' as dims;
+export const DIMENSIONS_EXAMPLE_USAGE = `@use '@san-siva/stylekit/styles/dimensions.module.scss' as dims;
 
 .card {
   border-radius: dims.$border-radius--2;
@@ -174,8 +174,8 @@ export const DIMENSIONS_EXAMPLE_USAGE = `@use '@san-siva/stylekit/dimensions.mod
 }`;
 
 export const BEST_PRACTICES_MODULE_ORGANIZATION = `// Good: Use namespaces with @use
-@use '@san-siva/stylekit/colors.module.scss' as colors;
-@use '@san-siva/stylekit/utils.module.scss' as utils;
+@use '@san-siva/stylekit/styles/colors.module.scss' as colors;
+@use '@san-siva/stylekit/styles/utils.module.scss' as utils;
 
 .component {
   color: colors.$color--primary;
@@ -183,7 +183,7 @@ export const BEST_PRACTICES_MODULE_ORGANIZATION = `// Good: Use namespaces with 
 }
 
 // Avoid: @import mixes everything into global scope
-@import '@san-siva/stylekit/colors.module.scss';  // Don't do this`;
+@import '@san-siva/stylekit/styles/colors.module.scss';  // Don't do this`;
 
 export const BEST_PRACTICES_SPACING = `// Good: Use spacing scale
 .section {
@@ -245,7 +245,7 @@ export const BEST_PRACTICES_UTILITY_COMPOSITION = `// Good: Compose utilities fo
 }`;
 
 export const REACT_NEXTJS_INTEGRATION = `// Import SCSS module
-import styles from '@san-siva/stylekit/index.module.scss';
+import styles from '@san-siva/stylekit/styles/index.module.scss';
 
 export function Card({ children }) {
   return (
@@ -269,12 +269,12 @@ export const VUE_INTEGRATION = `<template>
 </template>
 
 <style module>
-@use '@san-siva/stylekit/index.module.scss' as *;
+@use '@san-siva/stylekit/styles/index.module.scss' as *;
 </style>`;
 
 export const ANGULAR_INTEGRATION = `// component.scss
-@use '@san-siva/stylekit/colors.module.scss' as colors;
-@use '@san-siva/stylekit/utils.module.scss' as utils;
+@use '@san-siva/stylekit/styles/colors.module.scss' as colors;
+@use '@san-siva/stylekit/styles/utils.module.scss' as utils;
 
 :host {
   display: block;
@@ -287,7 +287,7 @@ export const ANGULAR_INTEGRATION = `// component.scss
 }`;
 
 export const CUSTOMIZATION_COLORS = `// your-colors.scss
-@use '@san-siva/stylekit/colors.module.scss' as stylekit-colors;
+@use '@san-siva/stylekit/styles/colors.module.scss' as stylekit-colors;
 
 // Add your custom colors
 $color--brand: #your-color;
@@ -299,7 +299,7 @@ $color--custom: #another-color;
   border-color: $color--brand;
 }`;
 
-export const CUSTOMIZATION_SPACING = `@use '@san-siva/stylekit/utils.module.scss' as utils;
+export const CUSTOMIZATION_SPACING = `@use '@san-siva/stylekit/styles/utils.module.scss' as utils;
 
 // Define custom spacing
 $spacing-custom: utils.rem(72);
@@ -310,7 +310,7 @@ $spacing-custom: utils.rem(72);
   padding: utils.space(5);  // 40px
 }`;
 
-export const CUSTOMIZATION_TYPOGRAPHY = `@use '@san-siva/stylekit/typography.module.scss' as type;
+export const CUSTOMIZATION_TYPOGRAPHY = `@use '@san-siva/stylekit/styles/typography.module.scss' as type;
 
 // Override with your font
 $custom-font-family: 'Your Font', sans-serif;
@@ -323,10 +323,10 @@ $custom-font-family: 'Your Font', sans-serif;
 }`;
 
 export const PERFORMANCE_BUNDLE_SIZE = `// Smaller bundle: Import specific modules
-@use '@san-siva/stylekit/colors.module.scss' as colors;
-@use '@san-siva/stylekit/utils.module.scss' as utils;
+@use '@san-siva/stylekit/styles/colors.module.scss' as colors;
+@use '@san-siva/stylekit/styles/utils.module.scss' as utils;
 
 // vs.
 
 // Larger bundle: Import everything
-@use '@san-siva/stylekit/index.module.scss' as stylekit;`;
+@use '@san-siva/stylekit/styles/index.module.scss' as stylekit;`;
