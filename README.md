@@ -1,5 +1,7 @@
 # StyleKit
 
+![Stylekit Demo](assets/stylekit.png)
+
 A comprehensive, modular SCSS design system providing colors, typography, animations, utilities, and layout dimensions for building consistent, beautiful user interfaces. Built with CSS Modules support and designed for modern web applications.
 
 **[View Full Documentation](https://stylekit-68309.web.app/)**
