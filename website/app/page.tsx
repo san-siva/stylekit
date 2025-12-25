@@ -661,6 +661,16 @@ export default function StyleKitDocumentation() {
 					hasMarginDown
 					rows={[
 						[
+							<code>$font-size--very-large</code>,
+							'64px (4rem)',
+							<code>.font-size--very-large</code>,
+						],
+						[
+							<code>$font-size--large</code>,
+							'48px (3rem)',
+							<code>.font-size--large</code>,
+						],
+						[
 							<code>$font-size--h1</code>,
 							'36px (2.25rem)',
 							<code>.font-size--h1</code>,
@@ -707,6 +717,18 @@ export default function StyleKitDocumentation() {
 					headers={['Variable', 'Preview']}
 					hasMarginDown
 					rows={[
+						[
+							'64px (very-large)',
+							<span style={{ fontSize: '64px', lineHeight: '1.2' }}>
+								Lorem ipsum dolor sit amet
+							</span>,
+						],
+						[
+							'48px (large)',
+							<span style={{ fontSize: '48px', lineHeight: '1.2' }}>
+								Lorem ipsum dolor sit amet
+							</span>,
+						],
 						[
 							'36px (h1)',
 							<span style={{ fontSize: '36px', lineHeight: '1.2' }}>

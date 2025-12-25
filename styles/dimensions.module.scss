@@ -15,7 +15,7 @@
 
 	padding: utils.rem(18);
 	min-height: calc(100% - #{utils.rem(36)});
-  width: calc(100% - #{utils.rem(36)});
+	width: calc(100% - #{utils.rem(36)});
 	height: auto;
 
 	&--contents-centered {
@@ -23,35 +23,30 @@
 		align-items: center;
 	}
 
-  &--no-padding {
-    padding: 0;
-  }
+	&--no-padding {
+		padding: 0;
+	}
 }
 
 $max-width--page-contents: utils.rem(780);
 
 .page {
-	--topbar-height: #{utils.rem(80)};
-	display: block;
+	$padding-top: utils.rem(80);
+	$padding-bottom: utils.rem(48);
 
-	height: auto;
-	min-height: calc(
-		100% - var(--topbar-height) - #{utils.rem(48)} - #{utils.rem(48)} -
-			#{utils.rem(160)} - #{utils.rem(489)}
-	);
-	max-width: utils.rem(1216);
+	display: block;
 	margin: 0 auto;
 
-	--width-sections: calc(
-		100% - #{utils.rem(240)}
-	); // width should be 120px + remaining width + 120px
+	height: auto;
+	min-height: calc(100% - #{$padding-top} - #{$padding-bottom});
+
+	max-width: utils.rem(1216);
+	--width-sections: calc(100% - #{utils.rem(240)});
 	width: var(--width-sections);
-	--padding-sections-left: calc(
-		(100% - var(--width-sections)) / 2
-	); // (100% - width) / 2
-	padding: utils.rem(48) var(--padding-sections-left);
-	--topbar-buffer: #{utils.rem(28)};
-	padding-top: utils.rem(80);
+
+	--padding-sections-left: calc((100% - var(--width-sections)) / 2);
+	padding: $padding-bottom var(--padding-sections-left);
+	padding-top: $padding-top;
 
 	&--contents-max-width {
 		> * {
@@ -59,15 +54,17 @@ $max-width--page-contents: utils.rem(780);
 		}
 	}
 
-  &--no-extra-padding {
-    --width-sections: calc(100% - #{utils.rem(16)} - #{utils.rem(16)}) !important;
-    --padding-sections-left: #{utils.rem(32)} !important;
-    padding: utils.rem(16) var(--padding-sections-left);
-  }
+	&--no-extra-padding {
+		--width-sections: calc(
+			100% - #{utils.rem(16)} - #{utils.rem(16)}
+		) !important;
+		--padding-sections-left: #{utils.rem(32)} !important;
+		padding: utils.rem(16) var(--padding-sections-left);
+	}
 
-  &--no-max-width {
-    max-width: unset;
-  }
+	&--no-max-width {
+		max-width: unset;
+	}
 }
 
 $border-radius: utils.rem(4);
