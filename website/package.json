@@ -9,7 +9,7 @@
 		"lint": "eslint"
 	},
 	"dependencies": {
-		"@san-siva/blogkit": "^1.1.9",
+		"@san-siva/blogkit": "^1.1.11",
 		"@san-siva/stylekit": "^1.0.4",
 		"next": "^16.0.10",
 		"react": "^19.0.0",
