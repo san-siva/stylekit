@@ -569,9 +569,7 @@ export default function StyleKitDocumentation() {
 					]}
 				/>
 
-				<p className={styles['margin-top--3']}>
-					<p className={styles['margin-bottom--2']}>Example usage:</p>
-				</p>
+				<p className={styles['margin-top--3']}>Example usage:</p>
 				<CodeBlock
 					language="scss"
 					code={codeExamples.COLORS_EXAMPLE_USAGE}
@@ -854,41 +852,32 @@ export default function StyleKitDocumentation() {
 					]}
 				/>
 
-
-			<p
-				className={`${styles['margin-top--3']} ${styles['margin-bottom--2']}`}
-			>
-				<strong>Line Heights:</strong>
-			</p>
-			<Table
-				headers={['Variable', 'Value', 'Use Case']}
-				hasMarginDown
-				rows={[
-					[
-						<code>$line-height--large</code>,
-						'1.9',
-						'Loose spacing for readability',
-					],
-					[
-						<code>$line-height--normal</code>,
-						'1.6',
-						'Standard paragraph text',
-					],
-					[
-						<code>$line-height--small</code>,
-						'1.4',
-						'Compact headings',
-					],
-					[
-						<code>$line-height--very-small</code>,
-						'1.2',
-						'Very compact text',
-					],
-				]}
-			/>
-				<p className={styles['margin-top--3']}>
-					<p className={styles['margin-bottom--2']}>Example usage:</p>
+				<p
+					className={`${styles['margin-top--3']} ${styles['margin-bottom--2']}`}
+				>
+					<strong>Line Heights:</strong>
 				</p>
+				<Table
+					headers={['Variable', 'Value', 'Use Case']}
+					hasMarginDown
+					rows={[
+						[
+							<code>$line-height--large</code>,
+							'1.9',
+							'Loose spacing for readability',
+						],
+						[
+							<code>$line-height--normal</code>,
+							'1.6',
+							'Standard paragraph text',
+						],
+						[<code>$line-height--small</code>, '1.4', 'Compact headings'],
+						[<code>$line-height--very-small</code>, '1.2', 'Very compact text'],
+					]}
+				/>
+				<div className={styles['margin-top--3']}>
+					<p className={styles['margin-bottom--2']}>Example usage:</p>
+				</div>
 				<CodeBlock
 					language="scss"
 					code={codeExamples.TYPOGRAPHY_EXAMPLE_USAGE}
@@ -896,11 +885,11 @@ export default function StyleKitDocumentation() {
 					hasMarginDown
 				/>
 
-				<p className={styles['margin-top--3']}>
+				<div className={styles['margin-top--3']}>
 					<p className={styles['margin-bottom--2']}>
 						Using utility classes in React/JSX:
 					</p>
-				</p>
+				</div>
 				<CodeBlock
 					language="tsx"
 					code={codeExamples.TYPOGRAPHY_UTILITY_CLASSES}

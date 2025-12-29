@@ -9,8 +9,8 @@
 		"lint": "eslint"
 	},
 	"dependencies": {
-		"@san-siva/blogkit": "^1.1.12",
-		"@san-siva/stylekit": "^1.0.4",
+		"@san-siva/blogkit": "^1.1.13",
+		"@san-siva/stylekit": "^1.0.5",
 		"next": "^16.0.10",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",

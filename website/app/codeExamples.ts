@@ -136,7 +136,6 @@ export const CONTAINER_SYSTEM = `.container {
 }`;
 
 export const PAGE_LAYOUT = `.page {
-  --topbar-height: 80px;
   max-width: 1216px;
   margin: 0 auto;
   padding: 48px calculated-sides;
