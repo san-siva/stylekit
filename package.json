@@ -1,6 +1,6 @@
 {
   "name": "@san-siva/stylekit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A modular SCSS design system with utilities, colors, typography, and animations",
   "main": "styles/index.module.scss",
   "exports": {
