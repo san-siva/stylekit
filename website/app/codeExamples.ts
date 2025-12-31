@@ -71,15 +71,15 @@ export const TYPOGRAPHY_UTILITY_CLASSES = `import styles from '@san-siva/styleki
   Welcome
 </h1>`;
 
-export const SPACING_UTILITIES_LIST = `.margin-top--0 through .margin-top--9
-.margin-bottom--0 through .margin-bottom--9
-.margin-left--0 through .margin-left--9
-.margin-right--0 through .margin-right--9
+export const SPACING_UTILITIES_LIST = `.margin-top--0 through .margin-top--12
+.margin-bottom--0 through .margin-bottom--12
+.margin-left--0 through .margin-left--12
+.margin-right--0 through .margin-right--12
 
-.padding-top--0 through .padding-top--9
-.padding-bottom--0 through .padding-bottom--9
-.padding-left--0 through .padding-left--9
-.padding-right--0 through .padding-right--9`;
+.padding-top--0 through .padding-top--12
+.padding-bottom--0 through .padding-bottom--12
+.padding-left--0 through .padding-left--12
+.padding-right--0 through .padding-right--12`;
 
 export const UTILS_EXAMPLE_USAGE_WITH_FUNCTIONS = `@use '@san-siva/stylekit/styles/utils.module.scss' as utils;
 

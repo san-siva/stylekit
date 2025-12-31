@@ -29,6 +29,9 @@ $spacings: (
 	7: 56,
 	8: 64,
 	9: 96,
+	10: 192,
+  11: 288,
+  12: 384,
 );
 
 @function space($n, $useEm: false) {
@@ -64,4 +67,3 @@ $spacings: (
 @include size-utility(bottom, true);
 @include size-utility(left, true);
 @include size-utility(right, true);
-

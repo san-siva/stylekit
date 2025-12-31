@@ -944,6 +944,9 @@ export default function StyleKitDocumentation() {
 						['7', '56px', '3.5rem', 'Large section spacing'],
 						['8', '64px', '4rem', 'Major section spacing'],
 						['9', '96px', '6rem', 'Page section spacing'],
+						['10', '192px', '12rem', 'Extra large page spacing'],
+						['11', '288px', '18rem', 'Hero section spacing'],
+						['12', '384px', '24rem', 'Maximum spacing'],
 					]}
 					hasMarginDown
 				/>
