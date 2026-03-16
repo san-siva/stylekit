@@ -285,18 +285,13 @@ export const ANGULAR_INTEGRATION = `// component.scss
   border: 1px solid colors.$color--border;
 }`;
 
-export const CUSTOMIZATION_COLORS = `// your-colors.scss
-@use '@san-siva/stylekit/styles/colors.module.scss' as stylekit-colors;
-
-// Add your custom colors
-$color--brand: #your-color;
-$color--custom: #another-color;
-
-// Use both StyleKit and custom colors
-.my-component {
-  background: stylekit-colors.$color--primary;
-  border-color: $color--brand;
-}`;
+export const CUSTOMIZATION_COLORS = `// your-theme.scss
+// Override StyleKit color tokens using the "with" clause
+@use '@san-siva/stylekit/styles/colors.module.scss' with (
+  $color--primary: #your-brand-color,
+  $color--secondary: #your-secondary-color,
+  $color--primary-accent: #your-accent-color
+);`;
 
 export const CUSTOMIZATION_SPACING = `@use '@san-siva/stylekit/styles/utils.module.scss' as utils;
 
@@ -309,14 +304,17 @@ $spacing-custom: utils.rem(72);
   padding: utils.space(5);  // 40px
 }`;
 
-export const CUSTOMIZATION_TYPOGRAPHY = `@use '@san-siva/stylekit/styles/typography.module.scss' as type;
+export const CUSTOMIZATION_TYPOGRAPHY = `// your-theme.scss
+// Override StyleKit font families using the "with" clause
+@use '@san-siva/stylekit/styles/typography.module.scss' as type with (
+  $font-family--primary: 'Inter', sans-serif,
+  $font-family--secondary: 'Lato', sans-serif,
+  $font-family--code: 'Fira Code', monospace
+);
 
-// Override with your font
-$custom-font-family: 'Your Font', sans-serif;
-
+// StyleKit's font size scale remains intact
 .heading {
-  font-family: $custom-font-family;
-  // But still use StyleKit's scale
+  font-family: type.$font-family--primary;
   font-size: type.$font-size--h1;
   font-weight: type.$font-weight--700;
 }`;

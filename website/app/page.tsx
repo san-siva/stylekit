@@ -1221,11 +1221,18 @@ export default function StyleKitDocumentation() {
 
 			<BlogSection title="Customization">
 				<p className={styles['margin-bottom--2']}>
-					While StyleKit provides sensible defaults, you can customize it for
-					your needs:
+					All StyleKit color and font family tokens are defined with{' '}
+					<code>!default</code>, which means they can be overridden at
+					import time using Sass&apos;s <code>with</code> clause. Your values
+					take precedence — StyleKit&apos;s defaults only apply when no
+					override is provided.
 				</p>
 
-				<BlogSection title="Extending the Color Palette">
+				<BlogSection title="Overriding Colors">
+					<p className={styles['margin-bottom--2']}>
+						Pass your brand colors directly when importing the colors module.
+						All other tokens remain at their defaults.
+					</p>
 					<CodeBlock
 						language="scss"
 						code={codeExamples.CUSTOMIZATION_COLORS}
@@ -1243,7 +1250,11 @@ export default function StyleKitDocumentation() {
 					/>
 				</BlogSection>
 
-				<BlogSection title="Typography Override">
+				<BlogSection title="Overriding Font Families">
+					<p className={styles['margin-bottom--2']}>
+						Swap out font families while keeping StyleKit&apos;s full
+						typographic scale (sizes, weights, line heights) intact.
+					</p>
 					<CodeBlock
 						language="scss"
 						code={codeExamples.CUSTOMIZATION_TYPOGRAPHY}
