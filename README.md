@@ -4,7 +4,7 @@
 
 A comprehensive, modular SCSS design system providing colors, typography, animations, utilities, and layout dimensions for building consistent, beautiful user interfaces. Built with CSS Modules support and designed for modern web applications.
 
-**[View Full Documentation](https://stylekit-68309.web.app/)**
+**[View Full Documentation](https://stylekit.santhoshsiva.dev/)**
 
 ## Overview
 
@@ -89,7 +89,7 @@ export function MyComponent() {
 
 ## Documentation
 
-Comprehensive documentation is available at [https://stylekit-68309.web.app/](https://stylekit-68309.web.app/)
+Comprehensive documentation is available at [https://stylekit.santhoshsiva.dev/](https://stylekit.santhoshsiva.dev/)
 
 The documentation includes:
 
@@ -207,9 +207,9 @@ The package provides multiple entry points for flexible imports:
 
 StyleKit is used in production on these sites:
 
-- **[StyleKit Documentation](https://stylekit-68309.web.app/)** - Interactive documentation site
+- **[StyleKit Documentation](https://stylekit.santhoshsiva.dev/)** - Interactive documentation site
 - **[Blogkit Documentation](https://blogkit-c367c.web.app/)** - Component library docs
-- **[Gitsy](https://gitsy-56895.web.app/)** - Blog application
+- **[Gitsy](https://gitsy.santhoshsiva.dev/)** - Blog application
 - **[Personal Portfolio](https://santhoshsiva.dev)** - Developer portfolio
 
 ## Works Great With

@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://stylekit-68309.web.app';
+export const SITE_URL = 'https://stylekit.santhoshsiva.dev';
 
 type SiteMeta = {
 	title: string;
