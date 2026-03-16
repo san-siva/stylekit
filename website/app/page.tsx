@@ -11,7 +11,18 @@ import * as codeExamples from './codeExamples';
 
 export default function StyleKitDocumentation() {
 	return (
-		<Blog>
+		<Blog
+			jsonLd={{
+				'@context': 'https://schema.org',
+				'@type': 'TechArticle',
+				headline: 'StyleKit - Documentation',
+				description:
+					'A modular SCSS design system with utilities, colors, typography, and animations',
+				author: { '@type': 'Person', name: 'Santhosh Siva', url: 'https://santhoshsiva.dev' },
+				url: 'https://stylekit-68309.web.app/',
+				publisher: { '@type': 'Person', name: 'Santhosh Siva' },
+			}}
+		>
 			<BlogHeader
 				title={['StyleKit']}
 				desc={[
