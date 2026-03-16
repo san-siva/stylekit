@@ -6,6 +6,8 @@ import styles from '@san-siva/stylekit/styles/index.module.scss';
 
 import '@san-siva/blogkit/styles.css';
 
+import { generateMetadata, STYLEKIT } from './data';
+
 const montserrat = Montserrat({
 	subsets: ['latin'] as const,
 	weight: ['400', '500', '600', '700', '800'] as const,
@@ -27,40 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
 	variable: '--font-jetbrains-mono',
 });
 
-const SITE_URL = 'https://stylekit-68309.web.app';
-const TITLE = 'StyleKit - Documentation';
-const DESCRIPTION =
-	'A modular SCSS design system with utilities, colors, typography, and animations';
-
-export const metadata: Metadata = {
-	title: TITLE,
-	description: DESCRIPTION,
-	keywords: [
-		'SCSS',
-		'design system',
-		'CSS',
-		'typography',
-		'colors',
-		'utilities',
-		'animations',
-		'front-end',
-	],
-	authors: [{ name: 'Santhosh Siva' }],
-	alternates: {
-		canonical: `${SITE_URL}/`,
-	},
-	openGraph: {
-		title: TITLE,
-		description: DESCRIPTION,
-		type: 'website',
-		url: `${SITE_URL}/`,
-	},
-	twitter: {
-		card: 'summary_large_image',
-		title: TITLE,
-		description: DESCRIPTION,
-	},
-};
+export const metadata: Metadata = generateMetadata(STYLEKIT);
 
 export default function RootLayout({
 	children,

@@ -8,6 +8,9 @@ import {
 } from '@san-siva/blogkit';
 import styles from './page.module.scss';
 import * as codeExamples from './codeExamples';
+import { STYLEKIT, SITE_URL } from './data';
+
+const AUTHOR_URL = 'https://santhoshsiva.dev';
 
 export default function StyleKitDocumentation() {
 	return (
@@ -15,11 +18,10 @@ export default function StyleKitDocumentation() {
 			jsonLd={{
 				'@context': 'https://schema.org',
 				'@type': 'TechArticle',
-				headline: 'StyleKit - Documentation',
-				description:
-					'A modular SCSS design system with utilities, colors, typography, and animations',
-				author: { '@type': 'Person', name: 'Santhosh Siva', url: 'https://santhoshsiva.dev' },
-				url: 'https://stylekit-68309.web.app/',
+				headline: STYLEKIT.title,
+				description: STYLEKIT.desc,
+				author: { '@type': 'Person', name: 'Santhosh Siva', url: AUTHOR_URL },
+				url: `${SITE_URL}/`,
 				publisher: { '@type': 'Person', name: 'Santhosh Siva' },
 			}}
 		>
