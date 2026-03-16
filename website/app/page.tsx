@@ -1235,10 +1235,10 @@ export default function StyleKitDocumentation() {
 			<BlogSection title="Customization">
 				<p className={styles['margin-bottom--2']}>
 					All StyleKit color and font family tokens are defined with{' '}
-					<code>!default</code>, which means they can be overridden at
-					import time using Sass&apos;s <code>with</code> clause. Your values
-					take precedence — StyleKit&apos;s defaults only apply when no
-					override is provided.
+					<code>!default</code>, which means they can be overridden at import
+					time using Sass&apos;s <code>with</code> clause. Your values take
+					precedence — StyleKit&apos;s defaults only apply when no override is
+					provided.
 				</p>
 
 				<BlogSection title="Overriding Colors">
@@ -1360,7 +1360,15 @@ export default function StyleKitDocumentation() {
 
 			<BlogSection title="About">
 				<p>
-					<strong>Author:</strong> Santhosh Siva
+					<strong>Author:</strong>{' '}
+					<a
+						href="https://santhoshsiva.dev"
+						target="_blank"
+						rel="noopener noreferrer"
+						className={styles['a--highlighted']}
+					>
+						Santhosh Siva
+					</a>
 					<br />
 					<strong>GitHub:</strong>{' '}
 					<a
