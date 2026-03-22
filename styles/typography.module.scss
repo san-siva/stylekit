@@ -100,6 +100,10 @@ $line-heights: (
 	text-align: center;
 }
 
+.font-style--italic {
+	font-style: italic;
+}
+
 .category__header {
 	color: colors.$color--pink;
 	font-size: $font-size--p;

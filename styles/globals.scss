@@ -84,6 +84,7 @@ typo.$font-sizes: (
 	a: typo.$font-size--p,
 	li: typo.$font-size--p,
 	span: typo.$font-size--p,
+	em: typo.$font-size--p,
 	input: typo.$font-size--p,
 	textarea: typo.$font-size--p,
 	select: typo.$font-size--p,
@@ -108,6 +109,10 @@ big {
 strong,
 b {
 	font-weight: typo.$font-weight--500;
+}
+
+em {
+	font-style: italic;
 }
 
 a {

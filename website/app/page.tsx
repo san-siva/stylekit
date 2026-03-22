@@ -921,6 +921,23 @@ export default function StyleKitDocumentation() {
 						[<code>$line-height--very-small</code>, '1.2', 'Very compact text'],
 					]}
 				/>
+				<p
+					className={`${styles['margin-top--3']} ${styles['margin-bottom--2']}`}
+				>
+					<strong>Font Style:</strong>
+				</p>
+				<Table
+					headers={['Utility Class', 'Value', 'Element']}
+					hasMarginDown
+					rows={[
+						[
+							<code>.font-style--italic</code>,
+							'italic',
+							<em>Lorem ipsum dolor sit amet</em>,
+						],
+					]}
+				/>
+
 				<div className={styles['margin-top--3']}>
 					<p className={styles['margin-bottom--2']}>Example usage:</p>
 				</div>
