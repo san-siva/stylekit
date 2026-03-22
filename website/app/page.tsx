@@ -6,7 +6,7 @@ import {
 	Callout,
 	Table,
 } from '@san-siva/blogkit';
-import styles from './page.module.scss';
+import styles from '@san-siva/stylekit/styles/index.module.scss';
 import * as codeExamples from './codeExamples';
 import { STYLEKIT, SITE_URL } from './data';
 
@@ -718,8 +718,23 @@ export default function StyleKitDocumentation() {
 						],
 						[
 							<code>$font-size--small</code>,
-							'12px (0.75rem)',
+							'14px (0.875rem)',
 							<code>.font-size--small</code>,
+						],
+						[
+							<code>$font-size--very-small</code>,
+							'12px (0.75rem)',
+							<code>.font-size--very-small</code>,
+						],
+						[
+							<code>$font-size--tiny</code>,
+							'10px (0.625rem)',
+							<code>.font-size--tiny</code>,
+						],
+						[
+							<code>$font-size--micro</code>,
+							'8px (0.5rem)',
+							<code>.font-size--micro</code>,
 						],
 					]}
 				/>
@@ -783,8 +798,26 @@ export default function StyleKitDocumentation() {
 							</span>,
 						],
 						[
-							'12px (small)',
+							'14px (small)',
+							<span style={{ fontSize: '14px', lineHeight: '1.2' }}>
+								Lorem ipsum dolor sit amet
+							</span>,
+						],
+						[
+							'12px (very-small)',
 							<span style={{ fontSize: '12px', lineHeight: '1.2' }}>
+								Lorem ipsum dolor sit amet
+							</span>,
+						],
+						[
+							'10px (tiny)',
+							<span style={{ fontSize: '10px', lineHeight: '1.2' }}>
+								Lorem ipsum dolor sit amet
+							</span>,
+						],
+						[
+							'8px (micro)',
+							<span style={{ fontSize: '8px', lineHeight: '1.2' }}>
 								Lorem ipsum dolor sit amet
 							</span>,
 						],

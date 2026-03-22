@@ -23,10 +23,11 @@ $font-size--h5: utils.rem(21);
 $font-size--h6: utils.rem(18);
 $font-size--big: utils.rem(18);
 $font-size--p: utils.rem(16);
-$font-size--p-small: utils.rem(14);
 $font-size--button: utils.rem(12);
-$font-size--small: utils.rem(12);
-$font-size--very-small: utils.rem(8);
+$font-size--small: utils.rem(14);
+$font-size--very-small: utils.rem(12);
+$font-size--tiny: utils.rem(10);
+$font-size--micro: utils.rem(8);
 $font-size: $font-size--p;
 
 $line-height--large: 1.9;
@@ -59,6 +60,9 @@ $font-sizes: (
 	button: $font-size--button,
 	p: $font-size--p,
 	small: $font-size--small,
+	very-small: $font-size--very-small,
+	tiny: $font-size--tiny,
+	micro: $font-size--micro,
 );
 
 $line-heights: (
