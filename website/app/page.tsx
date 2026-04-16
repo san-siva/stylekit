@@ -231,12 +231,12 @@ export default function StyleKitDocumentation() {
 									style={{
 										width: '80px',
 										height: '40px',
-										backgroundColor: '#4242fa',
+										backgroundColor: '#3F51B5',
 										border: '1px solid #e1e5e9',
 										borderRadius: '4px',
 									}}
 								></div>
-								<code>#4242fa</code>
+								<code>#3F51B5</code>
 							</div>,
 						],
 						[
@@ -248,12 +248,12 @@ export default function StyleKitDocumentation() {
 									style={{
 										width: '80px',
 										height: '40px',
-										backgroundColor: 'rgba(66, 66, 250, 0.05)',
+										backgroundColor: 'rgba(63, 81, 181, 0.05)',
 										border: '1px solid #e1e5e9',
 										borderRadius: '4px',
 									}}
 								></div>
-								<code>rgba(66, 66, 250, 0.05)</code>
+								<code>rgba(63, 81, 181, 0.05)</code>
 							</div>,
 						],
 						[
@@ -265,12 +265,12 @@ export default function StyleKitDocumentation() {
 									style={{
 										width: '80px',
 										height: '40px',
-										backgroundColor: 'rgba(66, 66, 250, 0.02)',
+										backgroundColor: 'rgba(63, 81, 181, 0.02)',
 										border: '1px solid #e1e5e9',
 										borderRadius: '4px',
 									}}
 								></div>
-								<code>rgba(66, 66, 250, 0.02)</code>
+								<code>rgba(63, 81, 181, 0.02)</code>
 							</div>,
 						],
 						[
