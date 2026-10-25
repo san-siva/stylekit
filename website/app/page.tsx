@@ -15,6 +15,7 @@ const AUTHOR_URL = 'https://santhoshsiva.dev';
 export default function StyleKitDocumentation() {
 	return (
 		<Blog
+			increasedWidthMode
 			jsonLd={{
 				'@context': 'https://schema.org',
 				'@type': 'TechArticle',
